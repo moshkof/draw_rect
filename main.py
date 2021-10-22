@@ -22,5 +22,7 @@ img_text = cv2.putText(img_rect, text, org, fontFace, fontScale, color, linType)
 
 cv2.imshow('Rect', img_rect)
 
+cv2.imwrite("image_with_rect_text.png", img_text)
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
