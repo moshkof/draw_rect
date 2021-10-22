@@ -1,10 +1,12 @@
 import cv2
 import numpy as np
 
-img_path = r"000027.jpg"
+img_path = r"images/000027.jpg"
 
 image = cv2.imread(img_path)
 image = cv2.resize(image, (1280, 720))
+
+cv2.imshow('new image', image)
 
 pt1 = (450, 40)
 pt2 = (800, 420)
@@ -22,7 +24,7 @@ img_text = cv2.putText(img_rect, text, org, fontFace, fontScale, color, linType)
 
 cv2.imshow('Rect', img_rect)
 
-cv2.imwrite("image_with_rect_text.png", img_text)
+cv2.imwrite("images/image_with_rect_text.png", img_text)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
